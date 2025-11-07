@@ -9,13 +9,16 @@ import { Sheet, SheetContent, SheetDescription, SheetHeader, SheetTitle, SheetTr
 import { Logo } from './logo';
 import { cn } from '@/lib/utils';
 
+const whatsappBaseUrl = 'https://wa.me/2349023567833';
+
 const navLinks = [
   { href: '/', label: 'Home' },
   { href: '/programs', label: 'Programs' },
   { href: '/events', label: 'Events' },
-  { href: '/recommendations', label: 'For You' },
-  { href: '/join-us', label: 'Join Us' },
-  { href: '/contact', label: 'Contact' },
+  { href: `${whatsappBaseUrl}?text=I'm interested in the Children's Club`, label: "Children's Club" },
+  { href: `${whatsappBaseUrl}?text=I'm interested in the Sports Club`, label: 'Sports Club' },
+  { href: `${whatsappBaseUrl}?text=I'm interested in the Summer School`, label: 'Summer School' },
+  { href: `${whatsappBaseUrl}?text=I'm interested in partnering with you`, label: 'Partner With Us' },
 ];
 
 export function Header() {
@@ -24,9 +27,12 @@ export function Header() {
 
   const NavLink = ({ href, label }: { href: string; label: string }) => {
     const isActive = pathname === href;
+    const isExternal = href.startsWith('http');
     return (
       <Link
         href={href}
+        target={isExternal ? '_blank' : undefined}
+        rel={isExternal ? 'noopener noreferrer' : undefined}
         onClick={() => setIsOpen(false)}
         className={cn(
           "text-sm font-medium transition-colors hover:text-primary",
@@ -42,14 +48,14 @@ export function Header() {
     <header className="sticky top-0 z-50 w-full border-b bg-card/80 backdrop-blur-md">
       <div className="container mx-auto flex h-16 items-center justify-between px-4">
         <Logo />
-        <nav className="hidden items-center space-x-6 md:flex">
+        <nav className="hidden items-center space-x-4 md:flex">
           {navLinks.map((link) => (
             <NavLink key={link.href} {...link} />
           ))}
         </nav>
         <div className="flex items-center gap-2">
-          <Button asChild className="hidden sm:inline-flex" variant="secondary">
-            <Link href="/donate">Donate</Link>
+           <Button asChild className="hidden sm:inline-flex bg-accent-orange hover:bg-accent-orange/90">
+            <Link href={`${whatsappBaseUrl}?text=I'd like to make a donation.`} target="_blank" rel="noopener noreferrer">Donate</Link>
           </Button>
           <Sheet open={isOpen} onOpenChange={setIsOpen}>
             <SheetTrigger asChild className="md:hidden">
@@ -66,7 +72,7 @@ export function Header() {
                     </div>
                 </SheetTitle>
                 <SheetDescription>
-                  Main navigation for the Universal Ambassadors Children's Club.
+                  Universal Ambassadors Children&apos;s Club
                 </SheetDescription>
               </SheetHeader>
               <div className="p-4">
@@ -75,6 +81,8 @@ export function Header() {
                     <Link
                       key={link.href}
                       href={link.href}
+                      target={link.href.startsWith('http') ? '_blank' : undefined}
+                      rel={link.href.startsWith('http') ? 'noopener noreferrer' : undefined}
                       onClick={() => setIsOpen(false)}
                       className={cn(
                         "text-lg font-medium transition-colors hover:text-primary",
@@ -84,8 +92,8 @@ export function Header() {
                       {link.label}
                     </Link>
                   ))}
-                  <Button asChild className="mt-4" variant="secondary" size="lg">
-                    <Link href="/donate">Donate Now</Link>
+                  <Button asChild className="mt-4 bg-accent-orange hover:bg-accent-orange/90" size="lg">
+                    <Link href={`${whatsappBaseUrl}?text=I'd like to make a donation.`} target="_blank" rel="noopener noreferrer">Donate Now</Link>
                   </Button>
                 </nav>
               </div>

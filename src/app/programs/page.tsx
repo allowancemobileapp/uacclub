@@ -27,6 +27,7 @@ const carouselImages = [
   placeholderImages.find((p) => p.id === 'community-impact'),
 ].filter(Boolean);
 
+const whatsappBaseUrl = 'https://wa.me/2349023567833';
 
 export default function ProgramsPage() {
   return (
@@ -99,7 +100,7 @@ export default function ProgramsPage() {
                     </CardContent>
                     <CardFooter>
                       <Button asChild>
-                        <Link href={`/contact?subject=Question about ${encodeURIComponent(category.title)}`}>
+                        <Link href={`${whatsappBaseUrl}?text=I have a question about ${encodeURIComponent(category.title)}`} target="_blank" rel="noopener noreferrer">
                           Learn More <ArrowRight className="ml-2 h-4 w-4" />
                         </Link>
                       </Button>

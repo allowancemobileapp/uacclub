@@ -10,9 +10,10 @@ import {
 import { Button } from '@/components/ui/button';
 import { placeholderImages } from '@/lib/placeholder-images.json';
 import { coreValues } from '@/lib/data';
-import { Check } from 'lucide-react';
+import { Bird, Check } from 'lucide-react';
 
 const heroImage = placeholderImages.find((img) => img.id === 'hero');
+const whatsappBaseUrl = 'https://wa.me/2349023567833';
 
 export default function Home() {
   return (
@@ -38,7 +39,7 @@ export default function Home() {
           </p>
           <div className="mt-8 flex flex-wrap justify-center gap-4">
             <Button asChild size="lg" className="bg-primary hover:bg-primary/90 text-primary-foreground shadow-lg">
-              <Link href="/join-us">Join the Children’s Club</Link>
+              <Link href={`${whatsappBaseUrl}?text=I'm interested in the Children's Club`} target="_blank" rel="noopener noreferrer">Join the Children’s Club</Link>
             </Button>
             <Button asChild size="lg" variant="secondary" className="shadow-lg">
               <Link href="/programs">Explore Our Programs</Link>
@@ -123,8 +124,8 @@ export default function Home() {
           <p className="mt-4 max-w-2xl mx-auto text-lg">
             Your generous donations help us continue to provide quality programs and resources for children. Every gift makes a difference.
           </p>
-          <Button asChild size="lg" variant="secondary" className="mt-8">
-            <Link href="/donate">Donate Now</Link>
+          <Button asChild size="lg" className="mt-8 bg-accent-orange hover:bg-accent-orange/90 text-primary-foreground">
+            <Link href={`${whatsappBaseUrl}?text=I'd like to make a donation.`} target="_blank" rel="noopener noreferrer">Donate Now</Link>
           </Button>
         </div>
       </section>
