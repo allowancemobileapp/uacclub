@@ -1,3 +1,70 @@
 {
-  "placeholderImages": []
+  "placeholderImages": [
+    {
+      "id": "hero",
+      "description": "A diverse group of happy children holding hands and running in a sunny park.",
+      "imageUrl": "https://images.unsplash.com/photo-1503454537195-1dcabb73ffb9?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxMHx8Y2hpbGRyZW4lMjBwbGF5aW5nfGVufDB8fHx8MTc2MjQ3MTk5MHww&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "children playing"
+    },
+    {
+      "id": "sports-club",
+      "description": "Children in jerseys playing soccer on a green field.",
+      "imageUrl": "https://images.unsplash.com/flagged/photo-1568127539877-487e4825ec58?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHxjaGlsZHJlbiUyMHNvY2NlcnxlbnwwfHx8fDE3NjI1NDA1MDl8MA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "children soccer"
+    },
+    {
+      "id": "summer-school",
+      "description": "Students sitting in a bright, modern classroom during a summer program abroad.",
+      "imageUrl": "https://images.unsplash.com/photo-1652766399415-aa89236590fa?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwyfHxzdHVkZW50cyUyMGNsYXNzcm9vbXxlbnwwfHx8fDE3NjI1MjYyOTV8MA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "students classroom"
+    },
+    {
+      "id": "talent-festival",
+      "description": "A child singing on a stage with colorful lights.",
+      "imageUrl": "https://images.unsplash.com/photo-1593101635106-9b9fd62f3d32?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw4fHxjaGlsZCUyMHNpbmdpbmd8ZW58MHx8fHwxNzYyNTQwNTA5fDA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "child singing"
+    },
+    {
+      "id": "leadership-training",
+      "description": "A group of teenagers collaborating on a project around a table.",
+      "imageUrl": "https://images.unsplash.com/photo-1601510145916-f07c8e1100eb?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw5fHx0ZWVuYWdlcnMlMjBjb2xsYWJvcmF0aW5nfGVufDB8fHx8MTc2MjU0MDUwOXww&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "teenagers collaborating"
+    },
+    {
+      "id": "weekly-fellowship",
+      "description": "Children sitting in a circle, listening to a storyteller.",
+      "imageUrl": "https://images.unsplash.com/photo-1632052999447-e542d08d4f7d?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw2fHxjaGlsZHJlbiUyMGxpc3RlbmluZ3xlbnwwfHx8fDE3NjI1NDA1MDl8MA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "children listening"
+    },
+    {
+      "id": "international-conference",
+      "description": "An auditorium filled with people attending a conference.",
+      "imageUrl": "https://images.unsplash.com/photo-1758566556472-9383af473c76?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxMHx8Y29uZmVyZW5jZSUyMGF1ZGl0b3JpdW18ZW58MHx8fHwxNzYyNTQwNTA5fDA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "conference auditorium"
+    },
+    {
+      "id": "donate-page",
+      "description": "A child's hands holding a small plant sprouting from the earth.",
+      "imageUrl": "https://images.unsplash.com/photo-1707129900844-484443dd3534?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw1fHxoYW5kcyUyMGhvbGRpbmclMjBwbGFudHxlbnwwfHx8fDE3NjI1NDA1MDl8MA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "hands holding plant"
+    },
+    {
+      "id": "contact-page",
+      "description": "A friendly person smiling while talking on a vintage telephone.",
+      "imageUrl": "https://images.unsplash.com/photo-1623605931891-d5b95ee98459?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw5fHxwZXJzb24lMjBzbWlsaW5nfGVufDB8fHx8MTc2MjUzMzQ0M3ww&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "person smiling"
+    },
+    {
+      "id": "register-page",
+      "description": "A parent and child filling out a form together at a desk.",
+      "imageUrl": "https://images.unsplash.com/photo-1600563093202-337471bde37e?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHxwYXJlbnQlMjBjaGlsZCUyMGZvcm18ZW58MHx8fHwxNzYyNTQwNTA5fDA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "parent child form"
+    },
+    {
+      "id": "recommendations-page",
+      "description": "A colorful maze seen from above, representing finding a path.",
+      "imageUrl": "https://images.unsplash.com/photo-1576373323985-695ebe220e16?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHxjb2xvcmZ1bCUyMG1hemV8ZW58MHx8fHwxNzYyNTQwNTA5fDA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "colorful maze"
+    }
+  ]
 }
