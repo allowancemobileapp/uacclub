@@ -26,7 +26,7 @@ export function Header() {
   const pathname = usePathname();
 
   const NavLink = ({ href, label }: { href: string; label: string }) => {
-    const isActive = pathname === href;
+    const isActive = !href.startsWith('http') && pathname === href;
     const isExternal = href.startsWith('http');
     return (
       <Link
@@ -86,7 +86,7 @@ export function Header() {
                       onClick={() => setIsOpen(false)}
                       className={cn(
                         "text-lg font-medium transition-colors hover:text-primary",
-                        pathname === link.href ? "text-primary" : "text-foreground"
+                        !link.href.startsWith('http') && pathname === link.href ? "text-primary" : "text-foreground"
                       )}
                     >
                       {link.label}
