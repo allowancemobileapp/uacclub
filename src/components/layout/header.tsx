@@ -8,7 +8,6 @@ import { Button } from '@/components/ui/button';
 import {
   Sheet,
   SheetContent,
-  SheetDescription,
   SheetHeader,
   SheetTitle,
   SheetTrigger,
@@ -40,42 +39,38 @@ const navLinks = [
   },
 ];
 
+
+const NavLink = ({ href, label }: { href: string; label: string }) => {
+  const pathname = usePathname();
+  const isExternal = href.startsWith('http');
+  const isActive = !isExternal && pathname === href;
+
+  return (
+    <Link
+      href={href}
+      target={isExternal ? '_blank' : undefined}
+      rel={isExternal ? 'noopener noreferrer' : undefined}
+      className={cn(
+        "text-sm font-medium transition-colors hover:text-primary",
+        isActive ? "text-primary" : "text-muted-foreground"
+      )}
+    >
+      {label}
+    </Link>
+  );
+};
+
+
 export function Header() {
   const [isOpen, setIsOpen] = useState(false);
   const pathname = usePathname();
-  const [isClient, setIsClient] = useState(false);
 
-  useEffect(() => {
-    setIsClient(true);
-  }, []);
-
-
-  const NavLink = ({ href, label }: { href: string; label: string }) => {
-    const isExternal = href.startsWith('http');
-    const isActive = !isExternal && pathname === href;
-
-    return (
-      <Link
-        href={href}
-        target={isExternal ? '_blank' : undefined}
-        rel={isExternal ? 'noopener noreferrer' : undefined}
-        onClick={() => setIsOpen(false)}
-        className={cn(
-          "text-sm font-medium transition-colors hover:text-primary",
-          isActive ? "text-primary" : "text-muted-foreground"
-        )}
-      >
-        {label}
-      </Link>
-    );
-  };
-  
   return (
     <header className="sticky top-0 z-50 w-full border-b bg-card/80 backdrop-blur-md">
       <div className="container mx-auto flex h-16 items-center justify-between px-4">
         <Logo />
         <nav className="hidden items-center space-x-4 md:flex">
-          {isClient && navLinks.map((link) => (
+          {navLinks.map((link) => (
             <NavLink key={link.href} {...link} />
           ))}
         </nav>
@@ -97,13 +92,10 @@ export function Header() {
                        <Logo />
                     </div>
                 </SheetTitle>
-                <SheetDescription>
-                  Universal Ambassadors Children&apos;s Club
-                </SheetDescription>
               </SheetHeader>
               <div className="p-4">
                 <nav className="flex flex-col space-y-6">
-                  {isClient && navLinks.map((link) => (
+                  {navLinks.map((link) => (
                     <Link
                       key={link.href}
                       href={link.href}
