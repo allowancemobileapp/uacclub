@@ -14,7 +14,7 @@ const navLinks = [
   { href: '/programs', label: 'Programs' },
   { href: '/events', label: 'Events' },
   { href: '/recommendations', label: 'For You' },
-  { href: '/donate', label: 'Donate' },
+  { href: '/join-us', label: 'Join Us' },
   { href: '/contact', label: 'Contact' },
 ];
 
@@ -48,8 +48,8 @@ export function Header() {
           ))}
         </nav>
         <div className="flex items-center gap-2">
-          <Button asChild className="hidden sm:inline-flex" variant="default">
-            <Link href="/register">Register</Link>
+          <Button asChild className="hidden sm:inline-flex" variant="secondary">
+            <Link href="/donate">Donate</Link>
           </Button>
           <Sheet open={isOpen} onOpenChange={setIsOpen}>
             <SheetTrigger asChild className="md:hidden">
@@ -60,12 +60,14 @@ export function Header() {
             </SheetTrigger>
             <SheetContent side="right" className="w-[300px] sm:w-[400px]">
               <SheetHeader>
-                <SheetTitle>
+                 <SheetTitle>
                     <div className="mb-8">
                         <Logo />
                     </div>
                 </SheetTitle>
-                <SheetDescription className="sr-only">Main navigation menu</SheetDescription>
+                <SheetDescription>
+                  Main navigation for the Universal Ambassadors Children's Club.
+                </SheetDescription>
               </SheetHeader>
               <div className="p-4">
                 <nav className="flex flex-col space-y-6">
@@ -82,8 +84,8 @@ export function Header() {
                       {link.label}
                     </Link>
                   ))}
-                  <Button asChild className="mt-4" variant="default" size="lg">
-                    <Link href="/register">Register Now</Link>
+                  <Button asChild className="mt-4" variant="secondary" size="lg">
+                    <Link href="/donate">Donate Now</Link>
                   </Button>
                 </nav>
               </div>

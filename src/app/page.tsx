@@ -4,24 +4,20 @@ import {
   Card,
   CardContent,
   CardDescription,
-  CardFooter,
   CardHeader,
   CardTitle,
 } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
-import { Badge } from '@/components/ui/badge';
-import { ArrowRight, Bird, BrainCircuit, Users, Calendar, Quote } from 'lucide-react';
 import { placeholderImages } from '@/lib/placeholder-images.json';
-import { programs, events } from '@/lib/data';
+import { coreValues } from '@/lib/data';
+import { Check } from 'lucide-react';
 
 const heroImage = placeholderImages.find((img) => img.id === 'hero');
-const featuredPrograms = programs.slice(0, 3);
-const upcomingEvent = events[0];
 
 export default function Home() {
   return (
     <div className="flex flex-col min-h-screen">
-      <section className="relative w-full h-[60vh] md:h-[70vh] text-white">
+      <section className="relative w-full h-[70vh] md:h-[80vh] text-white">
         {heroImage && (
           <Image
             src={heroImage.imageUrl}
@@ -29,132 +25,94 @@ export default function Home() {
             fill
             className="object-cover"
             priority
-            data-ai-hint={heroImage.imageHint}
+            data-ai-hint="children holding globe books"
           />
         )}
-        <div className="absolute inset-0 bg-black/50" />
-        <div className="relative h-full flex flex-col justify-center items-center text-center p-4">
-          <h1 className="text-4xl md:text-6xl font-bold font-headline tracking-tight leading-tight">
-            Nurturing Tomorrow&apos;s Leaders, Today.
+        <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/40 to-transparent" />
+        <div className="relative h-full flex flex-col justify-end items-center text-center p-4 md:p-8 pb-16 md:pb-24">
+          <h1 className="text-4xl md:text-6xl font-bold font-headline tracking-tight leading-tight text-shadow-lg">
+            Raising Kingdom Children as Lights for Global Impact
           </h1>
-          <p className="mt-4 max-w-2xl text-lg md:text-xl">
-            Join the Universal Ambassadors Children’s Club (UAC) and embark on a journey of spiritual, intellectual, and social growth.
+          <p className="mt-4 max-w-3xl text-lg md:text-xl text-shadow">
+            Building a world where every child grows in faith, wisdom, purpose, and leadership.
           </p>
-          <div className="mt-8 flex gap-4">
-            <Button asChild size="lg" className="bg-primary hover:bg-primary/90 text-primary-foreground">
-              <Link href="/register">Join Us</Link>
+          <div className="mt-8 flex flex-wrap justify-center gap-4">
+            <Button asChild size="lg" className="bg-primary hover:bg-primary/90 text-primary-foreground shadow-lg">
+              <Link href="/join-us">Join the Children’s Club</Link>
             </Button>
-            <Button asChild size="lg" variant="secondary">
-              <Link href="/programs">Explore Programs</Link>
+            <Button asChild size="lg" variant="secondary" className="shadow-lg">
+              <Link href="/programs">Explore Our Programs</Link>
             </Button>
           </div>
         </div>
       </section>
 
-      <section id="mission" className="py-16 md:py-24 bg-card">
+      <section id="about" className="py-16 md:py-24 bg-card">
         <div className="container mx-auto px-4">
-          <div className="text-center">
-            <h2 className="text-3xl md:text-4xl font-bold font-headline">Our Mission</h2>
-            <p className="mt-4 max-w-3xl mx-auto text-muted-foreground text-lg">
-              To raise a generation of children who are spiritually grounded, intellectually sharp, and socially responsible, ready to be ambassadors of God&apos;s Kingdom.
-            </p>
-          </div>
-          <div className="mt-12 grid grid-cols-1 md:grid-cols-3 gap-8">
-            <div className="text-center p-6">
-              <div className="inline-block p-4 bg-primary/10 rounded-full mb-4">
-                <Bird className="w-10 h-10 text-primary" />
-              </div>
-              <h3 className="text-xl font-semibold">Spiritual Development</h3>
-              <p className="mt-2 text-muted-foreground">Fostering a deep and personal relationship with God through fellowships, bible studies, and worship.</p>
+          <div className="grid md:grid-cols-2 gap-12 items-center">
+            <div className="prose lg:prose-lg max-w-none text-foreground">
+               <h2 className="text-3xl md:text-4xl font-bold font-headline mb-4">About UAC</h2>
+              <p>
+                The Universal Ambassadors Children’s Club (UAC) is a faith-based global children’s initiative dedicated to raising Kingdom-minded children who embody light, love, and leadership. We nurture boys and girls between ages 5–16 to discover their divine identity, build godly character, and develop their unique gifts in service to God and humanity.
+              </p>
+              <p>
+                We believe that true education begins with the development of the spirit, soul, and body, equipping children to grow in wisdom, strength, and purpose according to God’s original design.
+              </p>
+              <p className="text-sm text-muted-foreground">
+                The UAC is an initiative of the KOGA International Agency for Women and Youths Development in Africa, powered by Mothers of the Nations Global Communications Ltd, and works to raise a generation of Kingdom children who shine as lights and leaders in education, creativity, sports, and service.
+              </p>
             </div>
-            <div className="text-center p-6">
-              <div className="inline-block p-4 bg-primary/10 rounded-full mb-4">
-                <BrainCircuit className="w-10 h-10 text-primary" />
-              </div>
-              <h3 className="text-xl font-semibold">Intellectual Growth</h3>
-              <p className="mt-2 text-muted-foreground">Encouraging academic excellence, critical thinking, and creativity through our diverse programs.</p>
-            </div>
-            <div className="text-center p-6">
-              <div className="inline-block p-4 bg-primary/10 rounded-full mb-4">
-                <Users className="w-10 h-10 text-primary" />
-              </div>
-              <h3 className="text-xl font-semibold">Social Responsibility</h3>
-              <p className="mt-2 text-muted-foreground">Instilling values of leadership, service, and community engagement to make a positive impact.</p>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <section id="programs" className="py-16 md:py-24">
-        <div className="container mx-auto px-4">
-          <div className="text-center">
-            <h2 className="text-3xl md:text-4xl font-bold font-headline">Featured Programs</h2>
-            <p className="mt-4 max-w-3xl mx-auto text-muted-foreground text-lg">
-              Discover a wide range of activities designed to unlock your child&apos;s potential.
-            </p>
-          </div>
-          <div className="mt-12 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {featuredPrograms.map((program) => {
-              const programImage = placeholderImages.find(p => p.id === program.imageId);
-              return (
-                <Card key={program.slug} className="overflow-hidden flex flex-col transform hover:-translate-y-2 transition-transform duration-300 shadow-lg hover:shadow-2xl">
-                  {programImage && (
-                    <div className="relative h-56 w-full">
-                      <Image
-                        src={programImage.imageUrl}
-                        alt={programImage.description}
-                        fill
-                        className="object-cover"
-                        data-ai-hint={programImage.imageHint}
-                      />
-                    </div>
-                  )}
+             <div className="space-y-8">
+                <Card className="bg-background">
                   <CardHeader>
-                    <CardTitle>{program.title}</CardTitle>
+                    <CardTitle className="font-headline">Our Vision</CardTitle>
                   </CardHeader>
-                  <CardContent className="flex-grow">
-                    <p className="text-muted-foreground">{program.description}</p>
+                  <CardContent>
+                    <p className="text-muted-foreground">To raise a generation of Kingdom Children who live in truth, walk in love, and impact the world with excellence.</p>
                   </CardContent>
-                  <CardFooter>
-                    <Button asChild variant="link" className="p-0 text-primary">
-                      <Link href={`/programs#${program.slug}`}>Learn More <ArrowRight className="ml-2 h-4 w-4" /></Link>
-                    </Button>
-                  </CardFooter>
                 </Card>
-              );
-            })}
-          </div>
-          <div className="text-center mt-12">
-            <Button asChild size="lg" variant="outline">
-              <Link href="/programs">View All Programs</Link>
-            </Button>
+                <Card className="bg-background">
+                  <CardHeader>
+                    <CardTitle className="font-headline">Our Mission</CardTitle>
+                  </CardHeader>
+                  <CardContent>
+                    <p className="text-muted-foreground">To mentor and equip children through faith-based learning, creative expression, sportsmanship, global exposure, and community service — inspiring them to lead with purpose, confidence, and compassion.</p>
+                  </CardContent>
+                </Card>
+            </div>
           </div>
         </div>
       </section>
       
-      <section id="events" className="py-16 md:py-24 bg-card">
+       <section id="core-values" className="py-16 md:py-24">
         <div className="container mx-auto px-4">
-          <div className="grid md:grid-cols-2 gap-8 items-center">
-            <div className="text-center md:text-left">
-              <Badge variant="secondary" className="mb-4">Upcoming Event</Badge>
-              <h2 className="text-3xl md:text-4xl font-bold font-headline">{upcomingEvent.title}</h2>
-              <p className="flex items-center justify-center md:justify-start mt-4 text-muted-foreground text-lg"><Calendar className="mr-2 h-5 w-5" /> {upcomingEvent.date}</p>
-              <p className="mt-4 text-muted-foreground">{upcomingEvent.description}</p>
-              <Button asChild className="mt-6">
-                <Link href="/events">View All Events</Link>
-              </Button>
-            </div>
-            <div>
-              <Card className="bg-primary/10 border-primary/20">
-                <CardContent className="p-10">
-                  <blockquote className="text-center text-xl italic text-primary-foreground/90">
-                    <Quote className="w-10 h-10 text-primary/50 mx-auto mb-4" />
-                    "UAC has been a blessing for our family. Our children have grown so much in faith and confidence. We are truly grateful for this community."
-                  </blockquote>
-                  <p className="text-center mt-6 font-semibold">- The Adebayo Family</p>
-                </CardContent>
-              </Card>
-            </div>
+          <div className="text-center">
+            <h2 className="text-3xl md:text-4xl font-bold font-headline">Our Core Values</h2>
+            <p className="mt-4 max-w-3xl mx-auto text-muted-foreground text-lg">
+              The principles that guide every aspect of our mission.
+            </p>
+          </div>
+          <div className="mt-12 grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8">
+            {coreValues.slice(0, 4).map((value) => (
+              <div key={value.value} className="text-center p-6">
+                <div className="inline-block p-4 bg-primary/10 rounded-full mb-4">
+                  <Check className="w-10 h-10 text-primary" />
+                </div>
+                <h3 className="text-xl font-semibold">{value.value}</h3>
+                <p className="mt-2 text-muted-foreground">{value.description}</p>
+              </div>
+            ))}
+          </div>
+           <div className="mt-8 grid grid-cols-1 md:grid-cols-3 gap-8 md:max-w-4xl md:mx-auto">
+            {coreValues.slice(4).map((value) => (
+              <div key={value.value} className="text-center p-6">
+                <div className="inline-block p-4 bg-primary/10 rounded-full mb-4">
+                  <Check className="w-10 h-10 text-primary" />
+                </div>
+                <h3 className="text-xl font-semibold">{value.value}</h3>
+                <p className="mt-2 text-muted-foreground">{value.description}</p>
+              </div>
+            ))}
           </div>
         </div>
       </section>

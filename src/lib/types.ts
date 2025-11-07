@@ -22,3 +22,8 @@ export type ProgramCategory = {
   items: string[];
   quote?: string;
 };
+
+export type CoreValue = {
+  value: string;
+  description: string;
+}

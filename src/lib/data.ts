@@ -2,32 +2,25 @@ import type { Program, Event, ProgramCategory } from './types';
 
 export const programs: Program[] = [
   {
-    slug: 'sports-club',
-    title: 'Sports Club',
-    description: 'Engage in various sports, promoting teamwork and physical fitness.',
-    longDescription: 'Our Sports Club offers professional coaching in soccer, basketball, and athletics. It is designed to develop physical skills, sportsmanship, and a healthy lifestyle in a fun and supportive environment.',
-    imageId: 'sports-club',
+    slug: 'faith-and-character-development',
+    title: 'Faith and Character Development',
+    description: 'Instilling a strong moral compass and spiritual foundation.',
+    longDescription: 'Our Faith and Character Development programs include weekly and monthly fellowship gatherings, leadership and mentorship camps, and moral and life-skills training grounded in biblical principles.',
+    imageId: 'faith-development',
   },
   {
-    slug: 'summer-school-abroad',
-    title: 'Summer School Abroad',
-    description: 'Experience new cultures and learning environments with our international summer school program.',
-    longDescription: 'A unique opportunity for children to travel, learn, and grow. Our Summer School Abroad program includes academic courses, cultural excursions, and leadership workshops in partnership with institutions in the UK and USA.',
-    imageId: 'summer-school',
+    slug: 'creativity-culture-and-expression',
+    title: 'Creativity, Culture, and Expression',
+    description: 'Nurturing artistic talents and cultural appreciation.',
+    longDescription: 'This program focuses on arts, music, storytelling, and talent development, culminating in our Annual Ambassadors Talent Festival and Children’s Leadership Summit with creative workshops.',
+    imageId: 'creativity-expression',
   },
   {
-    slug: 'talent-festival',
-    title: 'Talent Festival',
-    description: 'A platform for children to showcase their God-given talents in music, drama, and arts.',
-    longDescription: 'The annual Talent Festival is a highlight of the UAC calendar. It encourages children to explore their creative abilities and share them with the community, building confidence and performance skills.',
-    imageId: 'talent-festival',
-  },
-  {
-    slug: 'leadership-training',
-    title: 'Leadership Training',
-    description: 'Equipping the next generation with essential leadership skills and a heart for service.',
-    longDescription: 'Our leadership training program focuses on practical skills such as public speaking, project management, and conflict resolution, all grounded in biblical principles of servant leadership.',
-    imageId: 'leadership-training',
+    slug: 'community-and-global-impact',
+    title: 'Community and Global Impact',
+    description: 'Empowering children to become agents of positive change.',
+    longDescription: 'Through children-led outreach, charity programs, environmental and peace-building projects, and service-learning activities, we teach responsibility and compassion.',
+    imageId: 'community-impact',
   },
 ];
 
@@ -127,4 +120,14 @@ export const events: Event[] = [
     description: 'An inspiring gathering of young ambassadors from around the world, featuring international speakers, workshops, and worship sessions.',
     imageId: 'international-conference',
   },
+];
+
+export const coreValues = [
+    { value: 'Faith', description: 'Grounded in biblical truth and trust in God.' },
+    { value: 'Love', description: 'Operating with compassion and kindness for all.' },
+    { value: 'Integrity', description: 'Upholding honesty and moral principles in every action.' },
+    { value: 'Excellence', description: 'Striving for the highest standards in all we do.' },
+    { value: 'Service', description: 'Developing a heart for serving God and humanity.' },
+    { value: 'Team Spirit', description: 'Fostering collaboration and mutual support.' },
+    { value: 'Global Mindset', description: 'Encouraging a worldview that transcends borders.' },
 ];
