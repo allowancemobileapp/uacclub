@@ -1,11 +1,18 @@
 'use client';
 
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
 import { Menu, X } from 'lucide-react';
 import { Button } from '@/components/ui/button';
-import { Sheet, SheetContent, SheetDescription, SheetHeader, SheetTitle, SheetTrigger } from '@/components/ui/sheet';
+import {
+  Sheet,
+  SheetContent,
+  SheetDescription,
+  SheetHeader,
+  SheetTitle,
+  SheetTrigger,
+} from '@/components/ui/sheet';
 import { Logo } from './logo';
 import { cn } from '@/lib/utils';
 
@@ -15,19 +22,38 @@ const navLinks = [
   { href: '/', label: 'Home' },
   { href: '/programs', label: 'Programs' },
   { href: '/events', label: 'Events' },
-  { href: `${whatsappBaseUrl}?text=I'm interested in the Children's Club`, label: "Children's Club" },
-  { href: `${whatsappBaseUrl}?text=I'm interested in the Sports Club`, label: 'Sports Club' },
-  { href: `${whatsappBaseUrl}?text=I'm interested in the Summer School`, label: 'Summer School' },
-  { href: `${whatsappBaseUrl}?text=I'm interested in partnering with you`, label: 'Partner With Us' },
+  {
+    href: `${whatsappBaseUrl}?text=I'm interested in the Children's Club`,
+    label: "Children's Club",
+  },
+  {
+    href: `${whatsappBaseUrl}?text=I'm interested in the Sports Club`,
+    label: 'Sports Club',
+  },
+  {
+    href: `${whatsappBaseUrl}?text=I'm interested in the Summer School`,
+    label: 'Summer School',
+  },
+  {
+    href: `${whatsappBaseUrl}?text=I'm interested in partnering with you`,
+    label: 'Partner With Us',
+  },
 ];
 
 export function Header() {
   const [isOpen, setIsOpen] = useState(false);
   const pathname = usePathname();
+  const [isClient, setIsClient] = useState(false);
+
+  useEffect(() => {
+    setIsClient(true);
+  }, []);
+
 
   const NavLink = ({ href, label }: { href: string; label: string }) => {
-    const isActive = !href.startsWith('http') && pathname === href;
     const isExternal = href.startsWith('http');
+    const isActive = !isExternal && pathname === href;
+
     return (
       <Link
         href={href}
@@ -49,7 +75,7 @@ export function Header() {
       <div className="container mx-auto flex h-16 items-center justify-between px-4">
         <Logo />
         <nav className="hidden items-center space-x-4 md:flex">
-          {navLinks.map((link) => (
+          {isClient && navLinks.map((link) => (
             <NavLink key={link.href} {...link} />
           ))}
         </nav>
@@ -68,7 +94,7 @@ export function Header() {
               <SheetHeader>
                  <SheetTitle>
                     <div className="mb-8">
-                        <Logo />
+                       <Logo />
                     </div>
                 </SheetTitle>
                 <SheetDescription>
@@ -77,7 +103,7 @@ export function Header() {
               </SheetHeader>
               <div className="p-4">
                 <nav className="flex flex-col space-y-6">
-                  {navLinks.map((link) => (
+                  {isClient && navLinks.map((link) => (
                     <Link
                       key={link.href}
                       href={link.href}
