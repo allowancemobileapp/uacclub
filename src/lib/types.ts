@@ -13,3 +13,12 @@ export type Event = {
   description: string;
   imageId: string;
 };
+
+export type ProgramCategory = {
+  slug: string;
+  title: string;
+  description: string;
+  imageId: string;
+  items: string[];
+  quote?: string;
+};

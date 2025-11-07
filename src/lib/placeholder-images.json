@@ -65,6 +65,30 @@
       "description": "A colorful maze seen from above, representing finding a path.",
       "imageUrl": "https://images.unsplash.com/photo-1576373323985-695ebe220e16?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHxjb2xvcmZ1bCUyMG1hemV8ZW58MHx8fHwxNzYyNTQwNTA5fDA&ixlib=rb-4.1.0&q=80&w=1080",
       "imageHint": "colorful maze"
+    },
+    {
+      "id": "faith-development",
+      "description": "A silhouette of a person praying at sunset.",
+      "imageUrl": "https://images.unsplash.com/photo-1485808269728-77bb07c059a8?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw2fHxwZXJzb24lMjBwcmF5aW5nfGVufDB8fHx8MTc2MjU0MTY0M3ww&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "person praying"
+    },
+    {
+      "id": "creativity-expression",
+      "description": "A child's hands covered in colorful paint.",
+      "imageUrl": "https://images.unsplash.com/photo-1666710988451-ba4450498967?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw3fHxjaGlsZCUyMHBhaW50aW5nfGVufDB8fHx8MTc2MjQ5NzUxMnww&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "child painting"
+    },
+    {
+      "id": "community-impact",
+      "description": "A group of volunteers planting trees in a park.",
+      "imageUrl": "https://images.unsplash.com/photo-1601408656579-bd835432e773?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw5fHx2b2x1bnRlZXJzJTIwcGxhbnRpbmd8ZW58MHx8fHwxNzYyNTQxNjQzfDA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "volunteers planting"
+    },
+    {
+      "id": "international-initiatives",
+      "description": "A colorful map of the world with pins on different countries.",
+      "imageUrl": "https://images.unsplash.com/photo-1706823871410-ed8b01faef7e?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwyfHx3b3JsZCUyMG1hcHxlbnwwfHx8fDE3NjI1MDkyODF8MA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "world map"
     }
   ]
 }

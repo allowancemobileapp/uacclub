@@ -9,56 +9,113 @@ import {
   CardTitle,
 } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
-import { programs } from '@/lib/data';
+import { programCategories } from '@/lib/data';
 import { placeholderImages } from '@/lib/placeholder-images.json';
-import { ArrowRight } from 'lucide-react';
+import { ArrowRight, CheckCircle2, Quote } from 'lucide-react';
+import { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious } from '@/components/ui/carousel';
 
 export const metadata = {
   title: 'Our Programs | UAC',
-  description: 'Explore the programs offered at Universal Ambassadors Children’s Club.',
+  description: 'Building Kingdom Leaders — One Child at a Time',
 };
+
+const carouselImages = [
+  placeholderImages.find((p) => p.id === 'sports-club'),
+  placeholderImages.find((p) => p.id === 'talent-festival'),
+  placeholderImages.find((p) => p.id === 'summer-school'),
+  placeholderImages.find((p) => p.id === 'leadership-training'),
+  placeholderImages.find((p) => p.id === 'community-impact'),
+].filter(Boolean);
+
 
 export default function ProgramsPage() {
   return (
     <div className="bg-card">
       <div className="container mx-auto px-4 py-16 md:py-24">
         <div className="text-center mb-12">
-          <h1 className="text-4xl md:text-5xl font-bold font-headline">Our Programs</h1>
+          <h1 className="text-4xl md:text-5xl font-bold font-headline">Building Kingdom Leaders — One Child at a Time</h1>
           <p className="mt-4 max-w-3xl mx-auto text-muted-foreground text-lg">
-            From sports and arts to leadership and international travel, our programs are designed to nurture every child&apos;s unique potential.
+            Our programs are designed to nurture every child&apos;s unique potential in a faith-based, supportive, and engaging environment.
           </p>
         </div>
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-          {programs.map((program) => {
-            const programImage = placeholderImages.find(p => p.id === program.imageId);
+
+        <div className="mb-16">
+          <Carousel
+            opts={{
+              align: 'start',
+              loop: true,
+            }}
+            className="w-full max-w-5xl mx-auto"
+          >
+            <CarouselContent>
+              {carouselImages.map((img, index) => (
+                img && (
+                  <CarouselItem key={index} className="md:basis-1/2 lg:basis-1/3">
+                    <div className="p-1">
+                      <div className="relative aspect-video overflow-hidden rounded-lg">
+                        <Image
+                          src={img.imageUrl}
+                          alt={img.description}
+                          fill
+                          className="object-cover"
+                          data-ai-hint={img.imageHint}
+                        />
+                      </div>
+                    </div>
+                  </CarouselItem>
+                )
+              ))}
+            </CarouselContent>
+            <CarouselPrevious />
+            <CarouselNext />
+          </Carousel>
+        </div>
+
+        <div className="space-y-12">
+          {programCategories.map((category) => {
+            const categoryImage = placeholderImages.find(p => p.id === category.imageId);
             return (
-              <Card key={program.slug} id={program.slug} className="flex flex-col md:flex-row overflow-hidden transform hover:-translate-y-1 transition-transform duration-300 shadow-lg hover:shadow-xl">
-                {programImage && (
-                  <div className="relative h-64 md:h-auto md:w-1/3">
-                    <Image
-                      src={programImage.imageUrl}
-                      alt={programImage.description}
-                      fill
-                      className="object-cover"
-                      data-ai-hint={programImage.imageHint}
-                    />
+              <Card key={category.slug} id={category.slug} className="overflow-hidden shadow-lg hover:shadow-xl transition-shadow duration-300">
+                <div className="grid md:grid-cols-2">
+                  <div className="p-8 flex flex-col justify-center">
+                    <CardHeader>
+                      <CardTitle className="font-headline text-2xl mb-2">{category.title}</CardTitle>
+                      <CardDescription>{category.description}</CardDescription>
+                    </CardHeader>
+                    <CardContent className="flex-grow space-y-3">
+                      <ul className="space-y-2">
+                        {category.items.map((item, index) => (
+                          <li key={index} className="flex items-start">
+                            <CheckCircle2 className="h-5 w-5 text-primary mr-3 mt-1 flex-shrink-0" />
+                            <span className="text-muted-foreground">{item}</span>
+                          </li>
+                        ))}
+                      </ul>
+                       {category.quote && (
+                        <blockquote className="mt-6 border-l-4 border-primary pl-4 italic text-muted-foreground">
+                          {category.quote}
+                        </blockquote>
+                      )}
+                    </CardContent>
+                    <CardFooter>
+                      <Button asChild>
+                        <Link href={`/contact?subject=Question about ${encodeURIComponent(category.title)}`}>
+                          Learn More <ArrowRight className="ml-2 h-4 w-4" />
+                        </Link>
+                      </Button>
+                    </CardFooter>
                   </div>
-                )}
-                <div className="flex flex-col flex-1">
-                  <CardHeader>
-                    <CardTitle>{program.title}</CardTitle>
-                    <CardDescription>{program.description}</CardDescription>
-                  </CardHeader>
-                  <CardContent className="flex-grow">
-                    <p className="text-sm text-muted-foreground">{program.longDescription}</p>
-                  </CardContent>
-                  <CardFooter>
-                    <Button asChild>
-                      <Link href={`/contact?subject=Enrollment in ${encodeURIComponent(program.title)}`}>
-                        Enroll Now <ArrowRight className="ml-2 h-4 w-4" />
-                      </Link>
-                    </Button>
-                  </CardFooter>
+                  {categoryImage && (
+                    <div className="relative min-h-[300px] md:min-h-0">
+                       <Image
+                          src={categoryImage.imageUrl}
+                          alt={categoryImage.description}
+                          fill
+                          className="object-cover"
+                          data-ai-hint={categoryImage.imageHint}
+                        />
+                    </div>
+                  )}
                 </div>
               </Card>
             );
