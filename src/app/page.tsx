@@ -13,7 +13,6 @@ import { coreValues } from '@/lib/data';
 import { Check } from 'lucide-react';
 
 const heroImage = placeholderImages.find((img) => img.id === 'hero');
-const whatsappBaseUrl = 'https://wa.me/2349023567833';
 
 
 export default function Home() {
@@ -126,7 +125,7 @@ export default function Home() {
             Your generous donations help us continue to provide quality programs and resources for children. Every gift makes a difference.
           </p>
           <Button asChild size="lg" className="mt-8 bg-accent-orange hover:bg-accent-orange/90 text-primary-foreground">
-            <Link href={`${whatsappBaseUrl}?text=I'd like to make a donation.`} target="_blank" rel="noopener noreferrer">Donate Now</Link>
+            <Link href="/donate">Donate Now</Link>
           </Button>
         </div>
       </section>
