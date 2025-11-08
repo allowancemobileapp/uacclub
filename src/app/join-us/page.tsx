@@ -1,14 +1,12 @@
 import Link from 'next/link';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
-import { ArrowRight, Gift, Handshake, Heart } from 'lucide-react';
+import { ArrowRight, Gift, Handshake, Heart, UserPlus } from 'lucide-react';
 
 export const metadata = {
   title: 'Join Us | UAC',
   description: 'Our Creed and Call — Get involved with the Universal Ambassadors Children’s Club.',
 };
-
-const whatsappBaseUrl = 'https://wa.me/2349023567833';
 
 export default function JoinUsPage() {
   return (
@@ -36,23 +34,23 @@ export default function JoinUsPage() {
                 <ActionCard 
                   title="Register Your Child"
                   description="Enroll your child (ages 5-16) to become a UAC member and unlock a world of growth."
-                  href={`${whatsappBaseUrl}?text=I want to register my child for the Children's Club.`}
+                  href="/join-us/childrens-club"
                   buttonText="Join the Children's Club"
-                  icon={<Heart className="w-8 h-8 text-primary" />}
+                  icon={<UserPlus className="w-8 h-8 text-primary" />}
                 />
                 
                 <ActionCard 
                   title="Join the UAC Sports Club"
                   description="Sign up for our sports programs to build discipline, teamwork, and physical fitness."
-                  href={`${whatsappBaseUrl}?text=I want to register my child for the Sports Club.`}
+                  href="/join-us/sports-club"
                   buttonText="Register for Sports Club"
-                  icon={<Handshake className="w-8 h-8 text-primary" />}
+                  icon={<Heart className="w-8 h-8 text-primary" />}
                 />
 
                 <ActionCard 
                   title="Apply for Summer School Abroad"
                   description="Give your child an international learning experience through our exchange programs."
-                  href={`${whatsappBaseUrl}?text=I want to apply for the Summer School Abroad program.`}
+                  href="/join-us/summer-school"
                   buttonText="Apply for Summer School"
                   icon={<Gift className="w-8 h-8 text-primary" />}
                 />
@@ -60,20 +58,10 @@ export default function JoinUsPage() {
                 <ActionCard 
                   title="Volunteer or Partner With Us"
                   description="Become a mentor, coach, or sponsor to empower more children."
-                  href={`${whatsappBaseUrl}?text=I'm interested in volunteering or partnering with UAC.`}
+                  href="/join-us/partner"
                   buttonText="Partner With Us"
                   icon={<Handshake className="w-8 h-8 text-primary" />}
                 />
-
-                <div className="md:col-span-2">
-                   <ActionCard 
-                    title="Donate"
-                    description="Your generous contribution helps us expand our reach and deepen our impact."
-                    href={`${whatsappBaseUrl}?text=I'd like to make a donation.`}
-                    buttonText="Donate Now"
-                    icon={<Gift className="w-8 h-8 text-primary" />}
-                  />
-                </div>
                 
               </CardContent>
            </Card>
@@ -101,7 +89,7 @@ function ActionCard({ title, description, href, buttonText, icon }: { title: str
       </CardHeader>
       <CardContent className="flex-grow flex items-end">
         <Button asChild className="w-full">
-          <Link href={href} target="_blank" rel="noopener noreferrer">
+          <Link href={href}>
             {buttonText} <ArrowRight className="ml-2 h-4 w-4" />
           </Link>
         </Button>

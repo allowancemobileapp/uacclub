@@ -11,7 +11,7 @@ import {
 import { Button } from '@/components/ui/button';
 import { programCategories } from '@/lib/data';
 import { placeholderImages } from '@/lib/placeholder-images.json';
-import { ArrowRight, CheckCircle2, Quote } from 'lucide-react';
+import { ArrowRight, CheckCircle2 } from 'lucide-react';
 import { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious } from '@/components/ui/carousel';
 
 export const metadata = {
@@ -26,8 +26,6 @@ const carouselImages = [
   placeholderImages.find((p) => p.id === 'leadership-training'),
   placeholderImages.find((p) => p.id === 'community-impact'),
 ].filter(Boolean);
-
-const whatsappBaseUrl = 'https://wa.me/2349023567833';
 
 export default function ProgramsPage() {
   return (
@@ -75,9 +73,20 @@ export default function ProgramsPage() {
         <div className="space-y-12">
           {programCategories.map((category) => {
             const categoryImage = placeholderImages.find(p => p.id === category.imageId);
+            let link = `/join-us/${category.slug}`;
+            if (category.slug === 'special-international-initiatives') {
+              link = '/join-us/partner';
+            } else if (category.slug === 'uac-sports-club') {
+              link = '/join-us/sports-club';
+            } else if (category.slug === 'uac-summer-school-abroad') {
+              link = '/join-us/summer-school';
+            } else if (category.slug === 'creativity-culture-expression' || category.slug === 'faith-character-development' || category.slug === 'community-global-impact') {
+              link = '/join-us/childrens-club';
+            }
+
             return (
               <Card key={category.slug} id={category.slug} className="overflow-hidden shadow-lg hover:shadow-xl transition-shadow duration-300">
-                <div className="grid md:grid-cols-2">
+                <div className={`grid ${categoryImage ? 'md:grid-cols-2' : 'grid-cols-1'}`}>
                   <div className="p-8 flex flex-col justify-center">
                     <CardHeader>
                       <CardTitle className="font-headline text-2xl mb-2">{category.title}</CardTitle>
@@ -100,7 +109,7 @@ export default function ProgramsPage() {
                     </CardContent>
                     <CardFooter>
                       <Button asChild>
-                        <Link href={`${whatsappBaseUrl}?text=I have a question about ${encodeURIComponent(category.title)}`} target="_blank" rel="noopener noreferrer">
+                        <Link href={link}>
                           Learn More <ArrowRight className="ml-2 h-4 w-4" />
                         </Link>
                       </Button>

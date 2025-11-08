@@ -15,11 +15,11 @@ const formSchema = z.object({
   parentEmail: z.string().email({ message: 'Please enter a valid email.' }),
   parentPhone: z.string().min(10, { message: 'Please enter a valid phone number.' }),
   childName: z.string().min(2, { message: 'Name must be at least 2 characters.' }),
-  childAge: z.coerce.number().min(3, { message: 'Child must be at least 3 years old.' }).max(18, { message: 'Child must be at most 18 years old.' }),
-  childInterests: z.string().min(3, { message: 'Please list at least one interest.' }),
+  childAge: z.coerce.number().min(8, { message: 'Child must be at least 8 years old.' }).max(18, { message: 'Child must be at most 18 years old.' }),
+  travelHistory: z.string().optional(),
 });
 
-export function RegisterForm() {
+export function SummerSchoolForm() {
   const { toast } = useToast();
   const form = useForm<z.infer<typeof formSchema>>({
     resolver: zodResolver(formSchema),
@@ -28,18 +28,35 @@ export function RegisterForm() {
       parentEmail: '',
       parentPhone: '',
       childName: '',
-      childInterests: '',
+      travelHistory: '',
     },
   });
 
   async function onSubmit(values: z.infer<typeof formSchema>) {
-    // Simulate API call
-    await new Promise(resolve => setTimeout(resolve, 2000));
-    console.log(values);
+    const whatsappNumber = '2349023567833';
+    const message = `
+*New UAC Summer School Application*
+
+*Parent/Guardian Information*
+Name: ${values.parentName}
+Email: ${values.parentEmail}
+Phone: ${values.parentPhone}
+
+*Child Information*
+Name: ${values.childName}
+Age: ${values.childAge}
+Previous International Travel: ${values.travelHistory || 'None'}
+    `;
+
+    const whatsappUrl = `https://wa.me/${whatsappNumber}?text=${encodeURIComponent(message)}`;
+    
     toast({
-      title: 'Registration Submitted!',
-      description: 'Thank you for registering. We will be in touch shortly.',
+      title: 'Redirecting to WhatsApp',
+      description: 'Please send the pre-filled message to complete your application.',
     });
+
+    window.open(whatsappUrl, '_blank');
+    
     form.reset();
   }
 
@@ -76,19 +93,19 @@ export function RegisterForm() {
               )}
             />
           </div>
-            <FormField
-              control={form.control}
-              name="parentPhone"
-              render={({ field }) => (
-                <FormItem>
-                  <FormLabel>Phone Number</FormLabel>
-                  <FormControl>
-                    <Input type="tel" placeholder="e.g., (123) 456-7890" {...field} />
-                  </FormControl>
-                  <FormMessage />
-                </FormItem>
-              )}
-            />
+          <FormField
+            control={form.control}
+            name="parentPhone"
+            render={({ field }) => (
+              <FormItem>
+                <FormLabel>Phone Number</FormLabel>
+                <FormControl>
+                  <Input type="tel" placeholder="e.g., (123) 456-7890" {...field} />
+                </FormControl>
+                <FormMessage />
+              </FormItem>
+            )}
+          />
         </div>
         <div className="space-y-4">
           <h3 className="text-xl font-semibold font-headline">Child Information</h3>
@@ -98,7 +115,7 @@ export function RegisterForm() {
                 name="childName"
                 render={({ field }) => (
                   <FormItem>
-                    <FormLabel>Child&apos;s Full Name</FormLabel>
+                    <FormLabel>Child's Full Name</FormLabel>
                     <FormControl>
                       <Input placeholder="e.g., John Doe" {...field} />
                     </FormControl>
@@ -111,9 +128,9 @@ export function RegisterForm() {
                 name="childAge"
                 render={({ field }) => (
                   <FormItem>
-                    <FormLabel>Child&apos;s Age</FormLabel>
+                    <FormLabel>Child's Age</FormLabel>
                     <FormControl>
-                      <Input type="number" placeholder="e.g., 10" {...field} />
+                      <Input type="number" placeholder="e.g., 12" {...field} />
                     </FormControl>
                     <FormMessage />
                   </FormItem>
@@ -122,12 +139,12 @@ export function RegisterForm() {
            </div>
           <FormField
             control={form.control}
-            name="childInterests"
+            name="travelHistory"
             render={({ field }) => (
               <FormItem>
-                <FormLabel>Child&apos;s Interests</FormLabel>
+                <FormLabel>Previous International Travel (Optional)</FormLabel>
                 <FormControl>
-                  <Textarea placeholder="e.g., Soccer, reading, science experiments" {...field} />
+                  <Textarea placeholder="e.g., UK, USA for vacation" {...field} />
                 </FormControl>
                 <FormMessage />
               </FormItem>
@@ -136,7 +153,7 @@ export function RegisterForm() {
         </div>
         <Button type="submit" disabled={form.formState.isSubmitting} className="w-full md:w-auto">
           {form.formState.isSubmitting && <Loader2 className="mr-2 h-4 w-4 animate-spin" />}
-          Submit Registration
+          Apply for Summer School
         </Button>
       </form>
     </Form>

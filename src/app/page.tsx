@@ -10,10 +10,11 @@ import {
 import { Button } from '@/components/ui/button';
 import { placeholderImages } from '@/lib/placeholder-images.json';
 import { coreValues } from '@/lib/data';
-import { Bird, Check } from 'lucide-react';
+import { Check } from 'lucide-react';
 
 const heroImage = placeholderImages.find((img) => img.id === 'hero');
 const whatsappBaseUrl = 'https://wa.me/2349023567833';
+
 
 export default function Home() {
   return (
@@ -39,7 +40,7 @@ export default function Home() {
           </p>
           <div className="mt-8 flex flex-wrap justify-center gap-4">
             <Button asChild size="lg" className="bg-primary hover:bg-primary/90 text-primary-foreground shadow-lg">
-              <Link href={`${whatsappBaseUrl}?text=I'm interested in the Children's Club`} target="_blank" rel="noopener noreferrer">Join the Children’s Club</Link>
+              <Link href="/join-us/childrens-club">Join the Children’s Club</Link>
             </Button>
             <Button asChild size="lg" variant="secondary" className="shadow-lg">
               <Link href="/programs">Explore Our Programs</Link>
