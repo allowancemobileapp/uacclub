@@ -22,6 +22,7 @@ export function DonateForm() {
     defaultValues: {
       name: '',
       email: '',
+      amount: '' as any,
     },
   });
 
