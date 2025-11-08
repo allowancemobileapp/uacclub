@@ -16,8 +16,6 @@ import {
 import { Logo } from './logo';
 import { cn } from '@/lib/utils';
 
-const whatsappBaseUrl = 'https://wa.me/2349023567833';
-
 const navLinks = [
   { href: '/', label: 'Home' },
   { href: '/programs', label: 'Programs' },
@@ -53,6 +51,7 @@ const NavLink = ({ href, label }: { href: string; label: string }) => {
 export function Header() {
   const [isOpen, setIsOpen] = useState(false);
   const [isClient, setIsClient] = useState(false);
+  const pathname = usePathname();
 
   useEffect(() => {
     setIsClient(true);
@@ -92,7 +91,7 @@ export function Header() {
                       onClick={() => setIsOpen(false)}
                       className={cn(
                         'text-lg font-medium transition-colors hover:text-primary',
-                        usePathname() === link.href ? 'text-primary' : 'text-foreground'
+                        pathname === link.href ? 'text-primary' : 'text-foreground'
                       )}
                     >
                       {link.label}
