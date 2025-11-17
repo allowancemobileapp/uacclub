@@ -9,13 +9,13 @@
     {
       "id": "sports-club",
       "description": "Children in jerseys playing soccer on a green field.",
-      "imageUrl": "https://images.unsplash.com/flagged/photo-1568127539877-487e4825ec58?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHxjaGlsZHJlbiUyMHNvY2NlcnxlbnwwfHx8fDE3NjI1NDA1MDl8MA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageUrl": "https://crwwlgwjdclhvwqwspoa.supabase.co/storage/v1/object/public/uacclub/WhatsApp%20Image%202025-11-03%20at%2018.13.05_1079915e.jpg",
       "imageHint": "children soccer"
     },
     {
       "id": "summer-school",
       "description": "Students sitting in a bright, modern classroom during a summer program abroad.",
-      "imageUrl": "https://images.unsplash.com/photo-1652766399415-aa89236590fa?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwyfHxzdHVkZW50cyUyMGNsYXNzcm9vbXxlbnwwfHx8fDE3NjI1MjYyOTV8MA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageUrl": "https://crwwlgwjdclhvwqwspoa.supabase.co/storage/v1/object/public/uacclub/WhatsApp%20Image%202025-11-03%20at%2018.13.06_aa6ede3e.jpg",
       "imageHint": "students classroom"
     },
     {
@@ -75,7 +75,7 @@
     {
       "id": "creativity-expression",
       "description": "A child's hands covered in colorful paint.",
-      "imageUrl": "https://images.unsplash.com/photo-1666710988451-ba4450498967?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw3fHxjaGlsZCUyMHBhaW50aW5nfGVufDB8fHx8MTc2MjQ5NzUxMnww&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageUrl": "https://crwwlgwjdclhvwqwspoa.supabase.co/storage/v1/object/public/uacclub/WhatsApp%20Image%202025-11-03%20at%2018.04.56_fd3f8cf3.jpg",
       "imageHint": "child painting"
     },
     {
@@ -87,7 +87,7 @@
     {
       "id": "international-initiatives",
       "description": "A colorful map of the world with pins on different countries.",
-      "imageUrl": "https://images.unsplash.com/photo-1706823871410-ed8b01faef7e?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwyfHx3b3JsZCUyMG1hcHxlbnwwfHx8fDE3NjI1MDkyODF8MA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageUrl": "https://crwwlgwjdclhvwqwspoa.supabase.co/storage/v1/object/public/uacclub/WhatsApp%20Image%202025-11-03%20at%2018.06.31_bda713c6.jpg",
       "imageHint": "world map"
     }
   ]
