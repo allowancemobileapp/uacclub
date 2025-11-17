@@ -31,17 +31,17 @@ export default function Home() {
         )}
         <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/40 to-transparent" />
         <div className="relative h-full flex flex-col justify-end items-center text-center p-4 md:p-8 pb-16 md:pb-24 pt-24 md:pt-32">
-          <h1 className="text-4xl md:text-5xl font-bold font-headline tracking-tight leading-tight text-shadow-lg">
+          <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold font-headline tracking-tight leading-tight text-shadow-lg">
             Raising Kingdom Children as Lights for Global Impact
           </h1>
-          <p className="mt-4 max-w-3xl text-lg md:text-xl text-shadow">
+          <p className="mt-4 max-w-3xl text-base sm:text-lg md:text-xl text-shadow">
             Building a world where every child grows in faith, wisdom, purpose, and leadership.
           </p>
-          <div className="mt-8 flex flex-wrap justify-center gap-4">
-            <Button asChild size="lg" className="bg-primary hover:bg-primary/90 text-primary-foreground shadow-lg">
+          <div className="mt-8 flex justify-center gap-2 sm:gap-4">
+            <Button asChild size="lg" className="bg-primary hover:bg-primary/90 text-primary-foreground shadow-lg text-sm sm:text-base">
               <Link href="/join-us/childrens-club">Join the Children’s Club</Link>
             </Button>
-            <Button asChild size="lg" variant="secondary" className="shadow-lg">
+            <Button asChild size="lg" variant="secondary" className="shadow-lg text-sm sm:text-base">
               <Link href="/programs">Explore Our Programs</Link>
             </Button>
           </div>
