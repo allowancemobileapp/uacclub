@@ -31,7 +31,7 @@ export default function Home() {
         )}
         <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/40 to-transparent" />
         <div className="relative h-full flex flex-col justify-end items-center text-center p-4 md:p-8 pb-16 md:pb-24 pt-24 md:pt-32">
-          <h1 className="text-4xl md:text-6xl font-bold font-headline tracking-tight leading-tight text-shadow-lg">
+          <h1 className="text-4xl md:text-5xl font-bold font-headline tracking-tight leading-tight text-shadow-lg">
             Raising Kingdom Children as Lights for Global Impact
           </h1>
           <p className="mt-4 max-w-3xl text-lg md:text-xl text-shadow">
