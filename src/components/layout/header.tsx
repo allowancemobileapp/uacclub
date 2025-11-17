@@ -50,19 +50,14 @@ const NavLink = ({ href, label }: { href: string; label: string }) => {
 
 export function Header() {
   const [isOpen, setIsOpen] = useState(false);
-  const [isClient, setIsClient] = useState(false);
   const pathname = usePathname();
 
-  useEffect(() => {
-    setIsClient(true);
-  }, []);
-
   return (
-    <header className="sticky top-0 z-50 w-full border-b bg-card/80 backdrop-blur-md">
+    <header className="w-full border-b bg-card/80 backdrop-blur-md">
       <div className="container mx-auto flex h-16 items-center justify-between px-4">
         <Logo />
         <nav className="hidden items-center space-x-4 md:flex">
-          {isClient && navLinks.map((link) => (
+          {navLinks.map((link) => (
             <NavLink key={link.href} {...link} />
           ))}
         </nav>
@@ -84,7 +79,7 @@ export function Header() {
               </SheetHeader>
               <div className="p-4">
                 <nav className="flex flex-col space-y-6">
-                  {isClient && navLinks.map((link) => (
+                  {navLinks.map((link) => (
                     <Link
                       key={link.href}
                       href={link.href}
