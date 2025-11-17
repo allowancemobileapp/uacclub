@@ -94,7 +94,7 @@ ${values.message}
               <FormItem>
                 <FormLabel>Phone Number</FormLabel>
                 <FormControl>
-                  <Input type="tel" placeholder="e.g., (123) 456-7890" {...field} />
+                  <Input type="tel" placeholder="e.g., +234 902 356 7833" {...field} />
                 </FormControl>
                 <FormMessage />
               </FormItem>
