@@ -30,7 +30,7 @@ export default function RootLayout({
       </head>
       <body className="font-body antialiased flex flex-col min-h-screen bg-background text-foreground">
         <Header />
-        <main className="flex-grow">{children}</main>
+        <main>{children}</main>
         <Footer />
         <Toaster />
       </body>

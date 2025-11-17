@@ -27,17 +27,14 @@ const navLinks = [
   { href: '/donate', label: 'Donate' },
 ];
 
-const NavLink = ({ href, label }: { href: string; label: string }) => {
+const NavLink = ({ href, label, onClick }: { href: string; label: string, onClick?: () => void }) => {
   const pathname = usePathname();
   const isActive = pathname === href;
-
-  const isExternal = href.startsWith('http');
 
   return (
     <Link
       href={href}
-      target={isExternal ? '_blank' : undefined}
-      rel={isExternal ? 'noopener noreferrer' : undefined}
+      onClick={onClick}
       className={cn(
         'text-sm font-medium transition-colors hover:text-primary',
         isActive ? 'text-primary' : 'text-muted-foreground'
@@ -50,10 +47,22 @@ const NavLink = ({ href, label }: { href: string; label: string }) => {
 
 export function Header() {
   const [isOpen, setIsOpen] = useState(false);
+  const [isScrolled, setIsScrolled] = useState(false);
   const pathname = usePathname();
 
+  useEffect(() => {
+    const handleScroll = () => {
+      setIsScrolled(window.scrollY > 10);
+    };
+    window.addEventListener('scroll', handleScroll);
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, []);
+
   return (
-    <header className="w-full border-b bg-card/80 backdrop-blur-md">
+    <header className={cn(
+        "w-full fixed top-0 left-0 z-50 transition-all duration-300",
+        isScrolled ? "bg-card/80 backdrop-blur-md border-b" : "bg-transparent border-b border-transparent"
+      )}>
       <div className="container mx-auto flex h-16 items-center justify-between px-4">
         <Logo />
         <nav className="hidden items-center space-x-4 md:flex">
@@ -80,17 +89,7 @@ export function Header() {
               <div className="p-4">
                 <nav className="flex flex-col space-y-6">
                   {navLinks.map((link) => (
-                    <Link
-                      key={link.href}
-                      href={link.href}
-                      onClick={() => setIsOpen(false)}
-                      className={cn(
-                        'text-lg font-medium transition-colors hover:text-primary',
-                        pathname === link.href ? 'text-primary' : 'text-foreground'
-                      )}
-                    >
-                      {link.label}
-                    </Link>
+                     <NavLink key={link.href} {...link} onClick={() => setIsOpen(false)} />
                   ))}
                   <Button asChild className="mt-4 bg-accent-orange hover:bg-accent-orange/90" size="lg">
                      <Link href="/donate">Donate Now</Link>
