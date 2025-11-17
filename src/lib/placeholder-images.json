@@ -3,7 +3,7 @@
     {
       "id": "hero",
       "description": "A diverse group of happy children holding hands and running in a sunny park.",
-      "imageUrl": "https://images.unsplash.com/photo-1503454537195-1dcabb73ffb9?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxMHx8Y2hpbGRyZW4lMjBwbGF5aW5nfGVufDB8fHx8MTc2MjQ3MTk5MHww&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageUrl": "https://crwwlgwjdclhvwqwspoa.supabase.co/storage/v1/object/public/uacclub/WhatsApp%20Image%202025-11-03%20at%2018.13.06_b316795d.jpg",
       "imageHint": "children playing"
     },
     {
@@ -57,19 +57,19 @@
     {
       "id": "register-page",
       "description": "A parent and child filling out a form together at a desk.",
-      "imageUrl": "https://images.unsplash.com/photo-1600563093202-337471bde37e?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHxwYXJlbnQlMjBjaGlsZCUyMGZvcm18ZW58MHx8fHwxNzYyNTQwNTA5fDA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageUrl": "https://images.unsplash.com/photo-1600563093202-337471bde37e?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHxwYXJlbnQlMjBjaGlsZCUyMGZvcm18ZW58MHx8fHwxNzYyNTQwNTA5fDA&ixlibrb-4.1.0&q=80&w=1080",
       "imageHint": "parent child form"
     },
     {
       "id": "recommendations-page",
       "description": "A colorful maze seen from above, representing finding a path.",
-      "imageUrl": "https://images.unsplash.com/photo-1576373323985-695ebe220e16?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHxjb2xvcmZ1bCUyMG1hemV8ZW58MHx8fHwxNzYyNTQwNTA5fDA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageUrl": "https://images.unsplash.com/photo-1576373323985-695ebe220e16?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHxjb2xvcmZ1bCUyMG1hemV8ZW58MHx8fHwxNzYyNTQwNTA5fDA&ixlib-rb-4.1.0&q=80&w=1080",
       "imageHint": "colorful maze"
     },
     {
       "id": "faith-development",
       "description": "A silhouette of a person praying at sunset.",
-      "imageUrl": "https://images.unsplash.com/photo-1485808269728-77bb07c059a8?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw2fHxwZXJzb24lMjBwcmF5aW5nfGVufDB8fHx8MTc2MjU0MTY0M3ww&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageUrl": "https://images.unsplash.com/photo-1485808269728-77bb07c059a8?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw2fHxwZXJzb24lMjBwcmF5aW5nfGVufDB8fHx8MTc2MjU0MTY0M3ww&ixlib-rb-4.1.0&q=80&w=1080",
       "imageHint": "person praying"
     },
     {
@@ -81,13 +81,13 @@
     {
       "id": "community-impact",
       "description": "A group of volunteers planting trees in a park.",
-      "imageUrl": "https://images.unsplash.com/photo-1601408656579-bd835432e773?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw5fHx2b2x1bnRlZXJzJTIwcGxhbnRpbmd8ZW58MHx8fHwxNzYyNTQxNjQzfDA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageUrl": "https://images.unsplash.com/photo-1601408656579-bd835432e773?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw5fHx2b2x1bnRlZXJzJTIwcGxhbnRpbmd8ZW58MHx8fHwxNzYyNTQxNjQzfDA&ixlib-rb-4.1.0&q=80&w=1080",
       "imageHint": "volunteers planting"
     },
     {
       "id": "international-initiatives",
       "description": "A colorful map of the world with pins on different countries.",
-      "imageUrl": "https://crwwlgwjdclhvwqwspoa.supabase.co/storage/v1/object/public/uacclub/WhatsApp%20Image%202025-11-03%20at%2018.06.31_bda713c6.jpg",
+      "imageUrl": "https://crwwlgwjdclhvwqwspoa.supabase.co/storage/v1/object/public/uacclub/WhatsApp%20Image%202025-11-03%20at%2018.13.06_3417270d.jpg",
       "imageHint": "world map"
     }
   ]
