@@ -26,11 +26,11 @@ export default function Home() {
             fill
             className="object-cover"
             priority
-            data-ai-hint="children holding globe books"
+            data-ai-hint="children playing"
           />
         )}
         <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/40 to-transparent" />
-        <div className="relative h-full flex flex-col justify-end items-center text-center p-4 md:p-8 pb-16 md:pb-24">
+        <div className="relative h-full flex flex-col justify-end items-center text-center p-4 md:p-8 pb-16 md:pb-24 pt-24 md:pt-8">
           <h1 className="text-4xl md:text-6xl font-bold font-headline tracking-tight leading-tight text-shadow-lg">
             Raising Kingdom Children as Lights for Global Impact
           </h1>
