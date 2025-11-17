@@ -93,19 +93,8 @@ export default function Home() {
               The principles that guide every aspect of our mission.
             </p>
           </div>
-          <div className="mt-12 grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8">
-            {coreValues.slice(0, 4).map((value) => (
-              <div key={value.value} className="text-center p-6">
-                <div className="inline-block p-4 bg-primary/10 rounded-full mb-4">
-                  <Check className="w-10 h-10 text-primary" />
-                </div>
-                <h3 className="text-xl font-semibold">{value.value}</h3>
-                <p className="mt-2 text-muted-foreground">{value.description}</p>
-              </div>
-            ))}
-          </div>
-           <div className="mt-8 grid grid-cols-1 md:grid-cols-3 gap-8 md:max-w-4xl md:mx-auto">
-            {coreValues.slice(4).map((value) => (
+          <div className="mt-12 grid grid-cols-1 md:grid-cols-3 gap-8">
+            {coreValues.map((value) => (
               <div key={value.value} className="text-center p-6">
                 <div className="inline-block p-4 bg-primary/10 rounded-full mb-4">
                   <Check className="w-10 h-10 text-primary" />

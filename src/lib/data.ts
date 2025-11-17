@@ -126,8 +126,4 @@ export const coreValues = [
     { value: 'Faith', description: 'Grounded in biblical truth and trust in God.' },
     { value: 'Love', description: 'Operating with compassion and kindness for all.' },
     { value: 'Integrity', description: 'Upholding honesty and moral principles in every action.' },
-    { value: 'Excellence', description: 'Striving for the highest standards in all we do.' },
-    { value: 'Service', description: 'Developing a heart for serving God and humanity.' },
-    { value: 'Team Spirit', description: 'Fostering collaboration and mutual support.' },
-    { value: 'Global Mindset', description: 'Encouraging a worldview that transcends borders.' },
 ];
