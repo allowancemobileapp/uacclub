@@ -3,7 +3,7 @@
     {
       "id": "hero",
       "description": "A diverse group of happy children holding hands and running in a sunny park.",
-      "imageUrl": "https://crwwlgwjdclhvwqwspoa.supabase.co/storage/v1/object/public/uacclub/WhatsApp%20Image%202025-11-03%20at%2018.13.06_b316795d.jpg",
+      "imageUrl": "https://crwwlgwjdclhvwqwspoa.supabase.co/storage/v1/object/public/uacclub/WhatsApp%20Image%202025-11-03%20at%2018.13.06_3417270d.jpg",
       "imageHint": "children playing"
     },
     {
@@ -51,7 +51,7 @@
     {
       "id": "contact-page",
       "description": "A friendly person smiling while talking on a vintage telephone.",
-      "imageUrl": "https://images.unsplash.com/photo-1623605931891-d5b95ee98459?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw5fHxwZXJzb24lMjBzbWlsaW5nfGVufDB8fHx8MTc2MjUzMzQ0M3ww&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageUrl": "https://images.unsplash.com/photo-1623605931891-d5b95ee98459?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw5fHxwZXJzb24lMjBzbWlsaW5nfGVufDB8fHx8MTc2MjUzMzQ0M3ww&ixlib-rb-4.1.0&q=80&w=1080",
       "imageHint": "person smiling"
     },
     {
@@ -87,7 +87,7 @@
     {
       "id": "international-initiatives",
       "description": "A colorful map of the world with pins on different countries.",
-      "imageUrl": "https://crwwlgwjdclhvwqwspoa.supabase.co/storage/v1/object/public/uacclub/WhatsApp%20Image%202025-11-03%20at%2018.13.06_3417270d.jpg",
+      "imageUrl": "https://crwwlgwjdclhvwqwspoa.supabase.co/storage/v1/object/public/uacclub/WhatsApp%20Image%202025-11-03%20at%2018.13.06_b316795d.jpg",
       "imageHint": "world map"
     }
   ]
