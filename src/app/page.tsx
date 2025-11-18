@@ -38,10 +38,10 @@ export default function Home() {
             Building a world where every child grows in faith, wisdom, purpose, and leadership.
           </p>
           <div className="mt-8 flex justify-center gap-2 sm:gap-4">
-            <Button asChild size="lg" className="bg-primary hover:bg-primary/90 text-primary-foreground shadow-lg text-sm sm:text-base">
+            <Button asChild size="default" className="text-xs sm:text-sm md:text-base md:px-8 md:py-6 bg-primary hover:bg-primary/90 text-primary-foreground shadow-lg">
               <Link href="/join-us/childrens-club">Join the Children’s Club</Link>
             </Button>
-            <Button asChild size="lg" variant="secondary" className="shadow-lg text-sm sm:text-base">
+            <Button asChild size="default" variant="secondary" className="text-xs sm:text-sm md:text-base md:px-8 md:py-6 shadow-lg">
               <Link href="/programs">Explore Our Programs</Link>
             </Button>
           </div>
